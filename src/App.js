@@ -5,6 +5,7 @@ import "bootstrap/dist/js/bootstrap";
 
 import Header from "./components/Header/Header";
 import Filters from "./components/Filters/Filters";
+import Cards from "./components/Cards/Cards";
 //!:
 
 const App = () => {
@@ -19,8 +20,10 @@ const App = () => {
           <div className="col-8">
             <div className="row">
               <div className="col-4">Cards</div>
-              <div className="col-4">Cards</div>
-              <div className="col-4">Cards</div>
+              <Cards />
+              <Cards />
+              {/* <div className="col-4">Cards</div>
+              <div className="col-4">Cards</div> */}
             </div>
           </div>
         </div>
