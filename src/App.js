@@ -1,3 +1,7 @@
+// In Order to start build the Character Cards -> copy word "results" and paste it into the div <Cards result={results}/>
+// after passing "results" into the Cards-Compinent in App.js=> I will go to the "CArds.js-Compnent" in the src-Folder => and destructure it =>
+
+
 import React, { useState, useEffect} from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,8 +16,8 @@ const App = () => {
   let[fetchedData, updateFetchedData] =useState([])
   let{info, results}= fetchedData
 
-  console.log("fetchedData.results",fetchedData.results)
-  console.log("fetchedData.info",fetchedData.info)
+  // console.log("fetchedData.results",fetchedData.results)
+  // console.log("fetchedData.info",fetchedData.info)
   
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
@@ -38,7 +42,7 @@ const App = () => {
             <div className="row">
               <div className="col-4">Cards</div>
               <Cards />
-              <Cards />
+              <Cards results={results}/>
             </div>
           </div>
         </div>
