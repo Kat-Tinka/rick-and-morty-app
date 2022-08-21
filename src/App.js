@@ -20,8 +20,18 @@ const App = () => {
   // I also want to bind this "setPageNumber" to the "pageButtons" which will later be displayed on the WebPage= whenever I'll click on a page Number, this will be updated exactly in the variable  with the "pageNumber"
   // put the "pageNumber" as a variable  inside the curlyBraces after $ in the api
   let [pageNumber, setPageNumber] = useState(1);
+  // I don't want to connsole log the data all the time ( like in : console.log("dataResults", data.results);)-> I need a variable for this, with useState and an empty Array[]: "let[fetchedData, updateFetchedData] =useState([])"
+  // ==> "fetchedData"= a variable and "updateFetchedData"= a function
+  let[fetchedData, updateFetchedData] =useState([])
+  // destructuring it with "let{info, results}= fetchedData" and 
+  //becausee "results" holds all our character-Card-components, I will paste it inside the "Cards.js-Component"
+  // AND because "info" store the pages =< I will put this info into the Pagination.js-Component
+  let{info, results}= fetchedData
 
-  let[fetchedData,]
+  // if I want to work only with the characters -> I have to put ".results" after "fetchedData"
+  // OR: if I want to work only with the info -> I have to put ".info" after "fetchedData"
+  //=> not a good way=> therefore I need to destructure
+  console.log("fetchedData.results",fetchedData.results)
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
   // whenever the api changes, I want to fetch new data inside the [api] = the "setPageNumber"-Function runs then and it will update the variable "pageNumber"
   // I have to run the async Function: 3 ways to write a function:
@@ -40,11 +50,13 @@ const App = () => {
 
       // after that we have to convert our raw data with the .then-smethod into readable jason-format
       let data = await fetch(api).then((res) => res.json());
+
+      updateFetchedData(data);
       // check , if it's working by writing console.log("data", data)=> go to console: there you'll see an object with two endpoints: "info" and "results"
       //=> the result right now is an Array of 20 characters (Cards)
       // => the infosection shows "next" , on which page you are; it shows how many pages there are => this section will work with the pagination part
       //=> if you want to fetch only the results, without "info" etc => you have to write data.results
-      console.log("dataResults", data.results);
+      // console.log("dataResults", data.results);
     })();
   }, [api]);
 
@@ -82,3 +94,7 @@ export default App;
 // If it doesnt, you have to import the "Filters " manualy, by writing  on top of this file "import Filters from "./" ->propositions should be shown then
 // --> if not short-cut_ strg  / control and space
 // The import-syntax: <Filters /> ==> it is automatically importing file from src: import Filters from "./components/Filters/Filters";
+
+SUMMARY of the mechanism here: 
+1. store api-lik inside api-variable 
+2.and instead of making it into a string-> make it into a template literal
