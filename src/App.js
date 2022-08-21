@@ -17,7 +17,11 @@ const App = () => {
             <Filters />
           </div>
           <div className="col-8">
-            <div className="row"></div>
+            <div className="row">
+              <div className="col-4">Cards</div>
+              <div className="col-4">Cards</div>
+              <div className="col-4">Cards</div>
+            </div>
           </div>
         </div>
       </div>
