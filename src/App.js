@@ -1,8 +1,11 @@
 // SUMMARY of the mechanism here: 
 // 1. store api-link inside api-variable 
 // 2.and instead of making it into a string-> make it into a template literal, so that I can work with variables
-// The dafault pageNumber is 1. whenever I load the react-app, it will run for the first time and upload all Data, according to the api
+// The dafault pageNumber is 1. whenever I load the react-app, it will run for the first time and upload all Data, according to the api 
 // with [api], I created a "watch/observer"( after useEffect)=> whenever the code will run, it will fetch fresh data => console.log(results)
+// whenever I click on a page, "setPageNumber" runs and changes the api with the var "pageNumber"=> whenever this happens, also the rest of the api (with charcters) is changed =>useEffect &async Function
+
+// ===================================================================
 
 // to beable to use the Variables/"let page"=> we use two hooks: useState and useEffect from react:
 // after that I am gonna to convert " let pageNumber = 7; into a useState-var"
