@@ -5,7 +5,9 @@ import PropTypes from "prop-types";
 const Header = ({ title }) => {
   return (
     <header className="header">
-      <h1>{title}</h1>
+      <span className="text-primary">
+        <h1 className="text-center ubuntu my-3">{title}</h1>
+      </span>
     </header>
   );
 };
