@@ -1,0 +1,6 @@
+{
+  "html.format.contentUnformatted": "",
+  "emmet.triggerExpansionOnTab": true,
+  "files.associations": { "*html": "html" },
+  "emmet.useInlineCompletions": true
+}
