@@ -1,14 +1,53 @@
-// import { useState, useEffect } from "react";
-//
+// to beable to use the Variables/"let page"=> we use two hooks: useState and useEffect from react:
+// after that I am gonna to convert " let pageNumber = 7; into a useState-var"
+import React, { useState, useEffect, useLayoutEffect } from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 
 import Header from "./components/Header/Header";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
-//!:
 
 const App = () => {
+  // NOT!: let api = "https://rickandmortyapi.com/api/character" =>
+  // if we want to use variables in the API, what we want to do, to be able to get directly to chosen pagenumber(like: "let pageNumber = ...App"), we can't put the API in quotationmarks=> string! We need to use state hooks to get the page number
+  // => you need Backtics instead
+
+  // let pageNumber = 7;
+  // => "pageNumber = a variable and setPageNumber = a function"
+  // the 1 ( useState(1)) is teh dafault value => so the pageNumber is set to 1 , in this case
+  // I alos want to bind this "setPageNumber" to the "pageButtons" which will later be displayed on the WebPage= whenever I will cklick on a page Number this will be updated exactly in the variable  with the "pageNumber"
+  // put the "pageNumber" as a variable  inside the curlyBraces after $ in the api
+  let [pageNumber, setPageNumber] = useState(1);
+
+  let[fetchedData,]
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
+  // whenever the api changes, I want to fetch new data inside the [api] = the "setPageNumber"-Function runs then and it will update the variblae "pageNumber"
+  // I have to run the asyn Function: 3 ways to wriet a function:
+  //1.-regular function:
+  // first you have to define it:function ab() { }
+  // and then you have to invoce it: ab()
+
+  //or://2. arrowFunction:    let cd = () => {}
+
+  // With IIFE(An IIFE (Immediately Invoked Function Expression=> see link:https://developer.mozilla.org/en-US/docs/Glossary/IIFE) is a JavaScript function that runs as soon as it is defined.) you don't have to write the name (like in a regular function), we just have to directly write the function: (function () {})(); => and we will use async in the function as well
+
+  useEffect(() => {
+    (async function () {
+      // in the next line: the data from the api will be fetched=> the keyWord "await", because it has to tell javaScript, "wait a little bit as long as our fetch-function doesn't fetch data from my api"-> because it will take some more time until the data from the api is fetched
+      // if we don't use "await" the code will break , because js runs from top to bottom and will not wait
+
+      // after that we have to convert our rawdata with the .then-kmethod into readable jason-format
+      let data = await fetch(api).then((res) => res.json());
+      // check , if it#s working by writing console.log("data", data)=> go to console: there you'll see an object with two endpoints: info and result
+      //=> the result right now is an Array of 20 characters (Cards)
+      // => the infosection shows "next" , on which page you are; it shows how many pages there are => thsi section will work with the pagination part
+      //=> if you want to fetch only the results,, without "info" etc => you have to write data.results
+      console.log("dataResults", data.results);
+    })();
+  }, [api]);
+
   return (
     <div className="App">
       <Header />
