@@ -1,3 +1,9 @@
+// SUMMARY of the mechanism here: 
+// 1. store api-link inside api-variable 
+// 2.and instead of making it into a string-> make it into a template literal, so that I can work with variables
+// The dafault pageNumber is 1. whenever I load the react-app, it will run for the first time and upload all Data, according to the api
+// with [api], I created a "watch/observer"( after useEffect)=> whenever the code will run, it will fetch fresh data => console.log(results)
+
 // to beable to use the Variables/"let page"=> we use two hooks: useState and useEffect from react:
 // after that I am gonna to convert " let pageNumber = 7; into a useState-var"
 import React, { useState, useEffect, useLayoutEffect } from "react";
@@ -24,7 +30,7 @@ const App = () => {
   // ==> "fetchedData"= a variable and "updateFetchedData"= a function
   let[fetchedData, updateFetchedData] =useState([])
   // destructuring it with "let{info, results}= fetchedData" and 
-  //becausee "results" holds all our character-Card-components, I will paste it inside the "Cards.js-Component"
+  //becausee "results" holds all our character-Card-components, I will pass it inside the "Cards.js-Component"
   // AND because "info" store the pages =< I will put this info into the Pagination.js-Component
   let{info, results}= fetchedData
 
@@ -32,6 +38,8 @@ const App = () => {
   // OR: if I want to work only with the info -> I have to put ".info" after "fetchedData"
   //=> not a good way=> therefore I need to destructure
   console.log("fetchedData.results",fetchedData.results)
+  console.log("fetchedData.info",fetchedData.info)
+  
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
   // whenever the api changes, I want to fetch new data inside the [api] = the "setPageNumber"-Function runs then and it will update the variable "pageNumber"
   // I have to run the async Function: 3 ways to write a function:
@@ -95,6 +103,4 @@ export default App;
 // --> if not short-cut_ strg  / control and space
 // The import-syntax: <Filters /> ==> it is automatically importing file from src: import Filters from "./components/Filters/Filters";
 
-SUMMARY of the mechanism here: 
-1. store api-lik inside api-variable 
-2.and instead of making it into a string-> make it into a template literal
+
