@@ -16,15 +16,15 @@ const App = () => {
 
   // let pageNumber = 7;
   // => "pageNumber = a variable and setPageNumber = a function"
-  // the 1 ( useState(1)) is teh dafault value => so the pageNumber is set to 1 , in this case
-  // I alos want to bind this "setPageNumber" to the "pageButtons" which will later be displayed on the WebPage= whenever I will cklick on a page Number this will be updated exactly in the variable  with the "pageNumber"
+  // the 1 ( useState(1)) is the dafault value => so the pageNumber is set to 1 , in this case
+  // I also want to bind this "setPageNumber" to the "pageButtons" which will later be displayed on the WebPage= whenever I'll click on a page Number, this will be updated exactly in the variable  with the "pageNumber"
   // put the "pageNumber" as a variable  inside the curlyBraces after $ in the api
   let [pageNumber, setPageNumber] = useState(1);
 
   let[fetchedData,]
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
-  // whenever the api changes, I want to fetch new data inside the [api] = the "setPageNumber"-Function runs then and it will update the variblae "pageNumber"
-  // I have to run the asyn Function: 3 ways to wriet a function:
+  // whenever the api changes, I want to fetch new data inside the [api] = the "setPageNumber"-Function runs then and it will update the variable "pageNumber"
+  // I have to run the async Function: 3 ways to write a function:
   //1.-regular function:
   // first you have to define it:function ab() { }
   // and then you have to invoce it: ab()
@@ -35,15 +35,15 @@ const App = () => {
 
   useEffect(() => {
     (async function () {
-      // in the next line: the data from the api will be fetched=> the keyWord "await", because it has to tell javaScript, "wait a little bit as long as our fetch-function doesn't fetch data from my api"-> because it will take some more time until the data from the api is fetched
-      // if we don't use "await" the code will break , because js runs from top to bottom and will not wait
+      // in the next line: the data from the api will be fetched=>use the keyWord "await", because it has to tell javaScript, "wait a little bit as long as our fetch-function doesn't fetch data from my api"-> because it will take some more time until the data from the api is fetched
+      // if we don't use "await" the code will break, because js runs from top to bottom and will not wait
 
-      // after that we have to convert our rawdata with the .then-kmethod into readable jason-format
+      // after that we have to convert our raw data with the .then-smethod into readable jason-format
       let data = await fetch(api).then((res) => res.json());
-      // check , if it#s working by writing console.log("data", data)=> go to console: there you'll see an object with two endpoints: info and result
+      // check , if it's working by writing console.log("data", data)=> go to console: there you'll see an object with two endpoints: "info" and "results"
       //=> the result right now is an Array of 20 characters (Cards)
-      // => the infosection shows "next" , on which page you are; it shows how many pages there are => thsi section will work with the pagination part
-      //=> if you want to fetch only the results,, without "info" etc => you have to write data.results
+      // => the infosection shows "next" , on which page you are; it shows how many pages there are => this section will work with the pagination part
+      //=> if you want to fetch only the results, without "info" etc => you have to write data.results
       console.log("dataResults", data.results);
     })();
   }, [api]);
