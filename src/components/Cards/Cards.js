@@ -13,7 +13,7 @@ const Cards = ({results}) => {
       return(
       <div key= {id} className="col-4">
         <div className="">
-          <img src={image}  alt="" className="img- fluid"/>
+          <img src={image}  alt="" className="img-fluid"/>
           </div>
         </div>
         );
