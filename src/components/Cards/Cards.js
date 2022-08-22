@@ -1,21 +1,31 @@
 import React from "react";
-// in order to create the Cards for the Characters I came from App.js here=> paste "results" in {}into const Cards:const Cards = ({results}) => {
-// remove in App.js the same clo
-// now I want to .map all this results-data to Cards(in WebSite)
-// write if-statement and declare a statement, if no characters are found
+import styles from "./Cards.module.css";
+
 const Cards = ({results}) => {
   let display;
   console.log('results :>> ', results);
 
   if(results){
     display = results.map((x)=> {
-      let {id, name, image} = x;
+      let {id, name, image, location, status, species} = x;
       return(
-      <div key= {id} className="col-4">
+        // set position relative for the parent div
+      <div key= {id} className="col-4 position-relative">
         <div className="">
           <img src={image}  alt="" className="img-fluid"/>
+          <div className="content">
+            <div className="fs-4 fw-bold mb-4">{name}</div>
+            <div className="">
+            <div className="fs-6 fw-bold">Last location</div>
+            <div className="fs-5 fw-bold">{location.name}</div>
+            {/* <div className="fs-9 fw-bold">Species</div>
+            <div className="">{species}</div> */}
+            </div>
           </div>
-        </div>
+          </div>
+          {/* in order to use the style inside the cards,I need also to paste "styles.badge" inside the classname (App.js)=>you must to use {} for this and, because  "position-absolute badge bg-danger " of the div is in a string, I have to convert this by using backticks( thats a template literal), $-sign  and again a {} => to use it as a variable: */}
+          <div className={`${styles.badge}position-absolute badge bg-danger`}>{status}</div> 
+      </div>
         );
       });
   } else{

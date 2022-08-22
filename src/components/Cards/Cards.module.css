@@ -1,0 +1,8 @@
+.badge{
+   top:10px;
+   right:20px;
+   font-size:17px;
+}
+
+/* in order to make this .badge-style of the Badges/Cards work , I need to go to Cards.js and import this style by writing there: "import Styles from "./Cards.module.css"; */
+/* in order to use the style inside the cards,I need also to paste "styles.badge" inside the classname (App.js)=>you must to use {} for this and, because  "position-absolute badge bg-danger " of the div is in a string, I have to convert this by using backticks, $-sign  and again a {} => to use it as a variable*/
