@@ -14,7 +14,8 @@ const Pagination = ({setPageNumber}) => {
       setPageNumber((x) =>x -1);
    };
 
-  return <div className="container">
+   // in order to center the perv and next buttons , write : d-flex justify-content-center in the container
+  return <div className="container d-flex justify-content-center">
   <button onClick={previous} className="btn btn-primary">Previous</button>
   <button onClick={next}className="btn btn-primary">Next</button> 
       </div>;
