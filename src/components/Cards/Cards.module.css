@@ -1,8 +1,25 @@
-.badge{
-   top:10px;
-   right:20px;
-   font-size:17px;
+/* create new class-name in order to create a border around the Cards, by picking up the color of the chosen badge in Bootstrap => now I have to insert that style in Cards.js in the div which is responsible for the Cards  */
+.cards{
+   border: 2px solid #0D6EFD;
+   border-radius: 10px;
 }
+
+/* .content{
+   padding: 10px; 
+} */
+
+.img{
+   /* because this is the border for the image inside the card, I use the borders top left and top right, bottom left and bottom right should not have an radius
+   I can also use instead a variable  "$radius:10px;"=> teh I put instead the pixels in .img the variable */
+   border-radius: 10px 10px 0 0 ;
+}
+ 
+
+.badge{
+   top: 10px;
+   right: 20px;
+   font-size: 17px;
+};
 
 /* in order to make this .badge-style of the Badges/Cards work , I need to go to Cards.js and import this style by writing there: "import Styles from "./Cards.module.css"; */
 /* in order to use the style inside the cards,I need also to paste "styles.badge" inside the classname (App.js)=>you must to use {} for this and, because  "position-absolute badge bg-danger " of the div is in a string, I have to convert this by using backticks, $-sign  and again a {} => to use it as a variable*/
