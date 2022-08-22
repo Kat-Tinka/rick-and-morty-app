@@ -25,7 +25,27 @@ const Cards = ({results}) => {
           </div>
           </div>
           {/* in order to use the style inside the cards,I need also to paste "styles.badge" inside the classname (App.js)=>you must to use {} for this and, because  "position-absolute badge bg-danger " of the div is in a string, I have to convert this by using backticks( thats a template literal), $-sign  and again a {} => to use it as a variable: */}
-          <div className={`${styles.badge} position-absolute badge bg-danger`}>{status}</div> 
+
+          {/* implement if-else-statement with an arrowfunction for the badge-colors depending on the status of the characters: */}
+          {(()=>{
+            if(status==="Dead"){
+              return(
+                <div className={`${styles.badge} position-absolute badge bg-danger`}>{status}</div>
+              )
+            }
+            else if(status==="Alive"){
+              return(
+                <div className={`${styles.badge} position-absolute badge bg-success`}>{status}</div>
+              )
+            }
+            else{
+              return(
+                <div className={`${styles.badge} position-absolute badge bg-secondary`}>{status}</div>
+              )
+            }
+
+          })()}
+           
       </div>
         );
       });
