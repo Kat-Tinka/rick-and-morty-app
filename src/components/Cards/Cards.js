@@ -14,9 +14,11 @@ const Cards = ({results}) => {
       // write "col-4", because so many columns are occupied  by a singel card in the row
       // I will use the id as the key=> so , I have to destructure it let{id}=x AND put key={id} inside the the div brackets
       // also , I want to display the names of the characters -> destructure  this ( and put it  in the let variable next to id) and pass the id to the return function
-      // => because I wrote in App.js a default page number (1)=> I got here the results of pagenumer 1
-      let {id, name}= x
-      return(<div key= {id} className=" .col-4">{name}</div>
+      // => because I set in App.js a default page number (1)=> I got here the results of pagenumber 1
+      let {id, name, image}= x
+      return(<div key= {id} className=" .col-4">{name} 
+      </div>
+
       )
 
     });
@@ -26,5 +28,6 @@ const Cards = ({results}) => {
   }
   return <>{display}</>;
 };
+
 
 export default Cards;

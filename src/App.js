@@ -55,6 +55,7 @@ Header.defaultProps = {
   title: "Rick and Morty App",
 };
 
+// ABOUT: export default App= This line works with "'import App from './App'" from the index.js file, when I imported App in order to put it within the render method. Other than that, App.js is just a function that returns some HTML.
 export default App;
 
 
