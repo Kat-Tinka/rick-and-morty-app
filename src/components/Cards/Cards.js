@@ -16,8 +16,12 @@ const Cards = ({results}) => {
       // also , I want to display the names of the characters -> destructure  this ( and put it  in the let variable next to id) and pass the id to the return function
       // => because I set in App.js a default page number (1)=> I got here the results of pagenumber 1
       let {id, name, image}= x
-      return(<div key= {id} className=" .col-4">{name} 
-      </div>
+      return(<div key= {id} className=" .col-4">
+        <div className="">
+          <img src={image}  alt=""/>
+        
+          </div>
+        </div>
 
       )
 
