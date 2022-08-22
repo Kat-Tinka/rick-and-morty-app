@@ -1,7 +1,3 @@
-// In Order to start build the Character Cards -> copy word "results" and paste it into the div <Cards result={results}/>
-// after passing "results" into the Cards-Compinent in App.js=> I will go to the "CArds.js-Compnent" in the src-Folder => and destructure it =>
-
-
 import React, { useState, useEffect} from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,9 +6,12 @@ import "bootstrap/dist/js/bootstrap";
 import Header from "./components/Header/Header";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
+import Pagination from "./components/Pagination/Pagination";
 
 const App = () => {
   let [pageNumber, setPageNumber] = useState(1);
+
+  console.log(pageNumber);
   let[fetchedData, updateFetchedData] =useState([])
   let{info, results}= fetchedData
 
@@ -48,6 +47,10 @@ const App = () => {
           </div>
         </div>
       </div>
+      {/* Pass "Pagination" (start at Pagination.js) here and import it, by writing  <Pagination. .. (on the ricght hand side there should pop up the rout to the Pagination.js-file=> just enter and it will be shown on top of this code - if not type it manually)
+      The word "Pagination" will appear on the Website ( That was the Test-Placeholder in the Pagination.js-code)=> use in this file instead "className="container"" */}
+      {/* coming from the Pagination.js-File=> insert "setPageNumber" to the Pagination-div here and also insert it to the const Pagination in curly Brackets of the >Pagination-js-file */}
+      <Pagination setPageNumber={setPageNumber}/>
     </div>
   );
 };
@@ -56,7 +59,7 @@ Header.defaultProps = {
   title: "Rick and Morty App",
 };
 
-// ABOUT: export default App= This line works with "'import App from './App'" from the index.js file, when I imported App in order to put it within the render method. Other than that, App.js is just a function that returns some HTML.
+
 export default App;
 
 

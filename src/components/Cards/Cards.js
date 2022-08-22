@@ -9,9 +9,7 @@ const Cards = ({results}) => {
     display = results.map((x)=> {
       let {id, name, image, location, status, species} = x;
       return(
-        // set position relative for the parent div
       <div key={id} className="col-4 mb-4 position-relative">
-       {/* as follows, I pasted "styles.cards" (from the "Cards.module.css"-file) inside curly braces in the div for the Cards */}
         <div className={styles.cards}>
           <img src={image} alt="" className={`${styles.img} img-fluid`}/>
           <div style={{padding: "30px"}}className="content">
@@ -24,9 +22,6 @@ const Cards = ({results}) => {
             </div>
           </div>
           </div>
-          {/* in order to use the style inside the cards,I need also to paste "styles.badge" inside the classname (App.js)=>you must to use {} for this and, because  "position-absolute badge bg-danger " of the div is in a string, I have to convert this by using backticks( thats a template literal), $-sign  and again a {} => to use it as a variable: */}
-
-          {/* implement if-else-statement with an arrowfunction for the badge-colors depending on the status of the characters: */}
           {(()=>{
             if(status==="Dead"){
               return(
