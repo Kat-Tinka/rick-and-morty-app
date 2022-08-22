@@ -50,7 +50,7 @@ const App = () => {
       {/* Pass "Pagination" (start at Pagination.js) here and import it, by writing  <Pagination. .. (on the ricght hand side there should pop up the rout to the Pagination.js-file=> just enter and it will be shown on top of this code - if not type it manually)
       The word "Pagination" will appear on the Website ( That was the Test-Placeholder in the Pagination.js-code)=> use in this file instead "className="container"" */}
       {/* coming from the Pagination.js-File=> insert "setPageNumber" to the Pagination-div here and also insert it to the const Pagination in curly Brackets of the >Pagination-js-file */}
-      <Pagination setPageNumber={setPageNumber}/>
+      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber}/>
     </div>
   );
 };
