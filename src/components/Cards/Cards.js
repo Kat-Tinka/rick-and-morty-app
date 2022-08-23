@@ -9,9 +9,12 @@ const Cards = ({results}) => {
     display = results.map((x)=> {
       let {id, name, image, location, status, species} = x;
       return(
+        // <div class="flip-card">
+        //   <div class="flip-card-inner">
+        //     <div class="flip-card-front">
       <div key={id} className="col-4 mb-4 position-relative">
-        <div className={styles.cards}>
-          <img src={image} alt="" className={`${styles.img} img-fluid`}/>
+                <div className={styles.cards}>
+                  <img src={image} alt="CharacterImage" className={`${styles.img} img-fluid`}/>
           <div style={{padding: "30px"}}className="content">
             <div className="fs-4 fw-bold mb-4">{name}</div>
             <div className="">
@@ -40,8 +43,10 @@ const Cards = ({results}) => {
             }
 
           })()}
-           
+
+          
       </div>
+    
         );
       });
   } else{

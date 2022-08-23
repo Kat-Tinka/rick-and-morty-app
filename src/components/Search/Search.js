@@ -14,7 +14,7 @@ const Search = ({updateSearch}) => {
       // 7.add FUNCTIONALITY:pass "event" into the brackets() & ".target.value"
       // 8.add FUNCTIONALITY:=> now, whatever I write inside the input now, it will trigger the "updateSearch"-Function inside the "search" and update "search"
       // from the:"let [search, updateSearch] = useState("");(in the App.js-file)
-      and its gonna update the API as well
+      // and its gonna update the API as well
 
       updateSearch(event.target.value);
     }}
