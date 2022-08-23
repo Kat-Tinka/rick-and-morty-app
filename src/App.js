@@ -6,16 +6,18 @@ import "bootstrap/dist/js/bootstrap";
 import Header from "./components/Header/Header";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
+
 import Cardback from "./components/Cards/Cardback";
 import Pagination from "./components/Pagination/Pagination";
 import Search from "./components/Search/Search";
+import { Button } from "bootstrap";
 
 
 
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
   let [search, updateSearch] = useState("");
-;
+
   console.log(pageNumber);
   let [fetchedData, updateFetchedData] = useState("");
   let { info, results } = fetchedData;
@@ -50,8 +52,10 @@ function App() {
           </div>
           <div className="col-8">
             <div className="row">
-              <div className="col-4">Cards</div>
+              <div className="col-4">Cards
+              </div>
               <Cards results={results} />
+              
             </div>
           </div>
         </div>

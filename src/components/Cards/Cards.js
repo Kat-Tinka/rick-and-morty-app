@@ -22,7 +22,22 @@ const Cards = ({results}) => {
             <div className="fs-5 ">{location.name}</div>
             {/* <div className="fs-9 fw-bold">Species</div>
             <div className="">{species}</div> */}
+
+            <button>Open for more Infos</button>
+              <div>
+                <div>
+                  <div className='popup'>
+                    <div className='popup-header'>
+                      <h1 >PopUp Modal</h1>
+                      <h1>x</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+
+
           </div>
           </div>
           {(()=>{
