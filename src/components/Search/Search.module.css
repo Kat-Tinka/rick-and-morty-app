@@ -1,7 +1,10 @@
-.input{
+.input {
    width:30%;
    border-radius: 5px;
    border: 2px solid  #0B5ED7;
    padding:10px 15px;
-   box-shadow: 1px 3px 9px rgba($color: #0B5ED7, $alpha: 0.25);
+   
 }
+
+
+
