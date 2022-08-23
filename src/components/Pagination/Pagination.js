@@ -7,7 +7,7 @@ import App from '../../App'
 // so I destructured it and setPageNumber (which is a function)
 const Pagination = ({pageNumber,setPageNumber}) => {
    let next = ()=>{
-      // the x represents theh previous value ( which is the pageNumber in App.js set to number 1)- I use an arrowFunction here
+      // the x represents the previous value ( which is the pageNumber in App.js set to number 1)- I use an arrowFunction here
       setPageNumber((x) =>x +1);
    };
    let previous = ()=>{
@@ -17,7 +17,7 @@ const Pagination = ({pageNumber,setPageNumber}) => {
       setPageNumber((x) =>x -1);
    };
 
-   // in order to center the perv and next buttons , write : d-flex justify-content-center in the container
+   // in order to center the previous- and next buttons, write : d-flex justify-content-center in the container
   return <div className="container d-flex justify-content-center gap-5 my-5">
   <button onClick={previous} className="btn btn-primary">Previous</button>
   <button onClick={next}className="btn btn-primary">Next</button> 
