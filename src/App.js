@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from "react";
+import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
@@ -6,11 +7,11 @@ import "bootstrap/dist/js/bootstrap";
 import Header from "./components/Header/Header";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
-
 import Cardback from "./components/Cards/Cardback";
 import Pagination from "./components/Pagination/Pagination";
 import Search from "./components/Search/Search";
 import { Button } from "bootstrap";
+
 
 
 

@@ -2,6 +2,22 @@
 .cards{
    border: 2px solid #0D6EFD;
    border-radius: 10px;
+   font-family: "Ubuntu";
+}
+
+/* .popup{
+  height:500 px;
+  width: 40%;
+  background-color:green;
+  top:25%;
+  right: 25%;
+} */
+
+popup-header{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 15px 0 15 px;
+
 }
 
 /* .cards {
@@ -40,6 +56,7 @@
    top: 10px;
    right: 20px;
    font-size: 17px;
+   font-family: "Ubuntu";
 };
 
 
@@ -204,3 +221,14 @@
  
 
  */
+ /* body {
+  margin: 0; */
+  /* font-family:  */
+  /* -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', */
+  /* 'Ubuntu' */
+  /* , 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+

@@ -23,7 +23,7 @@ const Cards = ({results}) => {
             {/* <div className="fs-9 fw-bold">Species</div>
             <div className="">{species}</div> */}
 
-            <button>Open for more Infos</button>
+            <button >Open for more Infos</button>
               <div>
                 <div>
                   <div className='popup'>
