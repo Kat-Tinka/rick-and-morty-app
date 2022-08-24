@@ -1,3 +1,4 @@
+// Nothing else to change here for the Rick and Morty Project
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";

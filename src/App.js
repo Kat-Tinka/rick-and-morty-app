@@ -21,7 +21,7 @@ function App() {
 
   console.log(pageNumber);
   let [fetchedData, updateFetchedData] = useState("");
-  let { info, results } = fetchedData;
+  let {  results } = fetchedData;
 
   // console.log("fetchedData.results",fetchedData.results)
   // console.log("fetchedData.info",fetchedData.info)
