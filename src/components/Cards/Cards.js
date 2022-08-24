@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Cards.module.css";
 
+// destructure the data I got from the App.js component:
 const Cards = ({results}) => {
   let display;
   console.log('results :>> ', results);
@@ -20,8 +21,8 @@ const Cards = ({results}) => {
             <div className="">
               <div className="fs-6 fw-bold">Last location:</div>
             <div className="fs-5 ">{location.name}</div>
-            {/* <div className="fs-9 fw-bold">Species</div>
-            <div className="">{species}</div> */}
+            <div className="fs-9 fw-bold">Species</div>
+            <div className="">{species}</div>
 
             <button >Open for more Infos</button>
               <div>

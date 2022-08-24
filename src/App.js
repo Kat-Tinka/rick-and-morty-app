@@ -4,12 +4,13 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 
+
 import Header from "./components/Header/Header";
+import Search from "./components/Search/Search";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
 import Cardback from "./components/Cards/Cardback";
 import Pagination from "./components/Pagination/Pagination";
-import Search from "./components/Search/Search";
 import { Button } from "bootstrap";
 
 
@@ -37,6 +38,9 @@ function App() {
     })();
   }, [api]);
 
+
+
+  
   return (
     // <div className="flip-card"></div>
     <div className="App">
