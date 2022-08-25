@@ -1,20 +1,17 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 
-
 import Header from "./components/Header/Header";
 import Search from "./components/Search/Search";
 import Filters from "./components/Filters/Filters";
 import Cards from "./components/Cards/Cards";
+import CardsNew from "./components/Cards/CardsNew";
 import Cardback from "./components/Cards/Cardback";
 import Pagination from "./components/Pagination/Pagination";
 import { Button } from "bootstrap";
-
-
-
 
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
@@ -22,7 +19,7 @@ function App() {
 
   console.log(pageNumber);
   let [fetchedData, updateFetchedData] = useState("");
-  let {  results } = fetchedData;
+  let { results } = fetchedData;
 
   // console.log("fetchedData.results",fetchedData.results)
   // console.log("fetchedData.info",fetchedData.info)
@@ -38,17 +35,14 @@ function App() {
     })();
   }, [api]);
 
-
-
-  
   return (
     // <div className="flip-card"></div>
     <div className="App">
-    <h1 className="text-center ubuntu my-4">Rick & Morty</h1>
+      <h1 className="text-center ubuntu my-4">Rick & Morty</h1>
 
       <Header />
 
-      <Search updateSearch={updateSearch}/>
+      <Search updateSearch={updateSearch} />
 
       <div className="container">
         <div className="row">
@@ -57,15 +51,14 @@ function App() {
           </div>
           <div className="col-8">
             <div className="row">
-              <div className="col-4">Cards
-              </div>
+              <div className="col-4">Cards</div>
               <Cards results={results} />
-              
             </div>
           </div>
         </div>
       </div>
       <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+      {/* <CardsNew results={results} /> */}
     </div>
   );
 }
@@ -74,7 +67,4 @@ Header.defaultProps = {
   title: "Rick and Morty App",
 };
 
-
 export default App;
-
-

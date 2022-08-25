@@ -1,12 +1,12 @@
-.popup{
-  height:500 px;
+.popup {
+  height: 500 px;
   width: 100%;
-  background-color:rgb(193, 15, 101);
-  top:25%;
+  background-color: rgb(193, 15, 101);
+  top: 25%;
   right: 25%;
 }
 
-popup-header{
+popup-header {
   display: flex;
   justify-content: space-around;
   padding: 10px 15px 10px 15px;

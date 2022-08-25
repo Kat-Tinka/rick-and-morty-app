@@ -1,8 +1,8 @@
 /* create new class-name in order to create a border around the Cards, by picking up the color of the chosen badge in Bootstrap => now I have to insert that style in Cards.js in the div which is responsible for the Cards  */
-.cards{
-   border: 2px solid #0D6EFD;
-   border-radius: 10px;
-   font-family: "Ubuntu";
+.cards {
+  border: 2px solid rgb(13, 110, 253);
+  border-radius: 10px;
+  font-family: "Ubuntu";
 }
 
 /* .popup{
@@ -13,11 +13,10 @@
   right: 25%;
 } */
 
-popup-header{
+popup-header {
   display: flex;
   justify-content: space-around;
   padding: 0 15px 0 15 px;
-
 }
 
 /* .cards {
@@ -40,28 +39,22 @@ popup-header{
   border-bottom: 2px solid blue;
 } */
 
-
-/* .content{
-   padding: 10px; 
+/* .content {
+  padding: 10px;
 } */
 
-.img{
-   /* because this is the border for the image inside the card, I use the borders top left and top right, bottom left and bottom right should not have an radius
+.img {
+  /* because this is the border for the image inside the card, I use the borders top left and top right, bottom left and bottom right should not have an radius
    I can also use instead a variable  "$radius:10px;"=> teh I put instead the pixels in .img the variable */
-   border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
 }
- 
 
-.badge{
-   top: 10px;
-   right: 20px;
-   font-size: 17px;
-   font-family: "Ubuntu";
-};
-
-
-
-
+.badge {
+  top: 10px;
+  right: 20px;
+  font-size: 17px;
+  font-family: "Ubuntu";
+}
 
 /* FLIP CARDS */
 /* Resets  */
@@ -89,9 +82,9 @@ popup-header{
    margin-bottom: 0.5rem;
  }
   */
- /* Card styles follow */
- 
- /* :root {
+/* Card styles follow */
+
+/* :root {
    --card-height: 18rem;
    --teal: #62a4ab;
    --white: #fefefe;
@@ -221,14 +214,13 @@ popup-header{
  
 
  */
- /* body {
+/* body {
   margin: 0; */
-  /* font-family:  */
-  /* -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', */
-  /* 'Ubuntu' */
-  /* , 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+/* font-family:  */
+/* -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', */
+/* 'Ubuntu' */
+/* , 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
-  /* -webkit-font-smoothing: antialiased;
+/* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 } */
-
