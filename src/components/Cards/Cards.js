@@ -11,11 +11,11 @@ const Cards = ({ results }) => {
 
   if (results) {
     display = results.map((x) => {
-      let { id, name, image, location, status, species } = x;
+      let { id, name, image, gender, species, location, status, episode } = x;
 
       return (
         <div key={id} className="col-4 mb-4 position-relative">
-          <div className={styles.cards}>
+          <div style={{ backgroundColor: "#fff" }} className={styles.cards}>
             <img
               src={image}
               alt="CharacterImage"
@@ -26,7 +26,15 @@ const Cards = ({ results }) => {
 
               <div className="">
                 {/* <button onClick={handleShow}>Open for more Infos</button> */}
-                <CardModal name={name} image={image} />
+                <CardModal
+                  name={name}
+                  status={status}
+                  image={image}
+                  gender={gender}
+                  species={species}
+                  location={location.name}
+                  episode={episode}
+                />
                 {/* <Modal
                   show={show}
                   style={{ backgroundColor: "rgb(13, 110, 253)" }}
