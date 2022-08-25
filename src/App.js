@@ -65,7 +65,7 @@ function App() {
 }
 
 Header.defaultProps = {
-  title: "Rick and Morty App",
+  title: "Rick and Morty",
 };
 
 export default App;

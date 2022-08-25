@@ -13,7 +13,7 @@ const Header = ({ title }) => {
 };
 
 Header.defaultProps = {
-  title: "Rick and Morty App",
+  title: "Rick and Morty",
 };
 
 Header.propTypes = {
