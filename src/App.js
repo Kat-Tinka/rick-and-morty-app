@@ -13,6 +13,7 @@ import Cardback from "./components/Cards/Cardback";
 import Pagination from "./components/Pagination/Pagination";
 import { Button } from "bootstrap";
 
+import Home from "./components/Home/Home";
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
   let [search, updateSearch] = useState("");

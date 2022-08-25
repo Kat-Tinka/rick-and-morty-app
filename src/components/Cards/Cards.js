@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { CloseButton, Modal } from "react-bootstrap";
+import CardModal from "./CardModal";
 import styles from "./Cards.module.css";
 
 // destructure the data I got from the App.js component:
 const Cards = ({ results }) => {
-  const [show, setShow] = useState(false);
+  /*  const [show, setShow] = useState(false); */
   let display;
   console.log("results :>> ", results);
 
@@ -12,18 +13,7 @@ const Cards = ({ results }) => {
     display = results.map((x) => {
       let { id, name, image, location, status, species } = x;
 
-      const handleShow = () => {
-        setShow((prev) => true);
-      };
-
-      const handleClose = () => {
-        setShow((prev) => !prev);
-      };
-
       return (
-        // <div class="flip-card">
-        //   <div class="flip-card-inner">
-        //     <div class="flip-card-front">
         <div key={id} className="col-4 mb-4 position-relative">
           <div className={styles.cards}>
             <img
@@ -35,9 +25,9 @@ const Cards = ({ results }) => {
               <div className="fs-4 fw-bold mb-4">{name}</div>
 
               <div className="">
-                <button onClick={handleShow}>Open for more Infos</button>
-
-                <Modal
+                {/* <button onClick={handleShow}>Open for more Infos</button> */}
+                <CardModal name={name} image={image} />
+                {/* <Modal
                   show={show}
                   style={{ backgroundColor: "rgb(13, 110, 253)" }}
                 >
@@ -57,7 +47,7 @@ const Cards = ({ results }) => {
                     <div className="">{species}</div>
                   </Modal.Body>
                   <Modal.Footer></Modal.Footer>
-                </Modal>
+                </Modal> */}
               </div>
             </div>
           </div>
