@@ -14,8 +14,14 @@ const Cards = ({ results }) => {
       let { id, name, image, gender, species, location, status, episode } = x;
 
       return (
-        <div key={id} className="col-4 mb-4 position-relative">
-          <div style={{ backgroundColor: "#fff" }} className={styles.cards}>
+        <div
+          key={id}
+          className="col-lg-4 col-md-6 col-12 mb-4 position-relative"
+        >
+          <div
+            style={{ backgroundColor: "#fff" }}
+            className={`${styles.cards} d-flex flex-column justify-content-center`}
+          >
             <img
               src={image}
               alt="CharacterImage"

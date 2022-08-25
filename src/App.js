@@ -50,7 +50,7 @@ function App() {
           <div className="col-3">
             <Filters />
           </div>
-          <div className="col-8">
+          <div className="col-lg-8 col-12">
             <div className="row">
               <div className="col-4">Cards</div>
               <Cards results={results} />

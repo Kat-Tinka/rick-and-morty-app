@@ -1,10 +1,12 @@
 .input {
-   width:30%;
-   border-radius: 5px;
-   border: 2px solid  #0B5ED7;
-   padding:10px 15px;
-   
+  width: 30%;
+  border-radius: 5px;
+  border: 2px solid #0b5ed7;
+  padding: 10px 15px;
 }
 
-
-
+@media (max-width: 567px) {
+  .input {
+    width: 80%;
+  }
+}
