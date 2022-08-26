@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Cards.module.css from "./Cards.module.css"
+
 
 function CardModal(props) {
   const { name, status, gender, image, location, species } = props;
@@ -11,6 +13,22 @@ function CardModal(props) {
   console.log("show", show);
   return (
     <>
+    {/* FLIP CARD CODE  ---> ========================================================== */}
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+{/* <--- FLIP CARD CODE  ========================================================== */}
+
+
       <button
         onClick={handleShow}
         style={{ backgroundColor: "rgb(144, 181, 237)" }}
