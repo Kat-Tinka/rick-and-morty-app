@@ -11,17 +11,6 @@ function CardModal(props) {
   console.log("show", show);
   return (
     <>
-      {/* FLIP CARD CODE  ---> ========================================================== */}
-      {/* <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src={image} alt="Avatar" style="width:300px;height:300px;" />
-          </div>
-          <div class="flip-card-back"></div>
-        </div>
-      </div> */}
-      {/* <--- FLIP CARD CODE  ========================================================== */}
-
       <button
         onClick={handleShow}
         style={{ backgroundColor: "rgb(144, 181, 237)" }}
