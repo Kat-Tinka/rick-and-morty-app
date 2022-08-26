@@ -3,7 +3,6 @@ import { CloseButton, Modal } from "react-bootstrap";
 import CardModal from "./CardModal";
 import styles from "./Cards.module.css";
 
-// destructure the data I got from the App.js component:
 const Cards = ({ results }) => {
   /*  const [show, setShow] = useState(false); */
   let display;

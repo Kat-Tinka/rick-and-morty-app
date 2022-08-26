@@ -39,7 +39,7 @@ function App() {
   return (
     // <div className="flip-card"></div>
     <div className="App">
-      <h1 className="text-center ubuntu my-4">Rick & Morty</h1>
+      {/* <h1 className="text-center ubuntu my-4">Rick & Morty</h1> */}
 
       <Header />
 

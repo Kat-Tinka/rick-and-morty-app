@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import styles from "./Cards.module.css";
+
+// ===CARDMODAL FUNCTION  --> ====================================================
 function CardModal(props) {
   const { name, status, gender, image, location, species } = props;
   const [show, setShow] = useState(false);
@@ -9,14 +11,15 @@ function CardModal(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   console.log("show", show);
+
+  //! === CARD BACKSIDE================================================================
   return (
     <>
-      <button
-        onClick={handleShow}
-        style={{ backgroundColor: "rgb(144, 181, 237)" }}
-      >
+      {/* Button for more Infos-> leads to CardModal  */}
+      <button onClick={handleShow} style={{ backgroundColor: "white" }}>
         Open for more Infos
       </button>
+
       <Modal
         show={show}
         style={{ backgroundColor: "rgb(13, 110, 253)" }}
@@ -24,7 +27,8 @@ function CardModal(props) {
       >
         <Modal.Header closeButton>
           <Modal.Title>
-            {name}
+            <div className="fs-4 fw-bold">{name}</div>
+
             {/* {image} */}
           </Modal.Title>
         </Modal.Header>
@@ -34,17 +38,16 @@ function CardModal(props) {
             alt="CharacterImage"
             className={`${styles.img} img-fluid`}
           />
-          <div className="fs-6 fw-bold">Status:</div>
-          <div className="">{status}</div>
-          <div className="fs-6 fw-bold">Gender:</div>
-          <div className="">{gender}</div>
-          <div className="fs-9 fw-bold">Species:</div>
-          <div className="">{species}</div>
-          <div className="fs-6 fw-bold">Last location:</div>
-          <div className="fs-5 ">{location}</div>
-          <div className="fs-6 fw-bold">Episode:</div>
-          {/* <div className="fs-6 fw-bold">Episode:</div>
-          <div className="fs-5 ">{episode}</div> */}
+          <div className="fs-5 fw-bold">Status:</div>
+          <div className="fs-5">{status}</div>
+          <div className="fs-5 fw-bold">Gender:</div>
+          <div className="fs-5">{gender}</div>
+          <div className="fs-5 fw-bold">Species:</div>
+          <div className="fs-5">{species}</div>
+          <div className="fs-5 fw-bold">Last location:</div>
+          <div className="fs-5">{location}</div>
+          {/* <div className="fs-5 fw-bold">Episode:</div> */}
+          {/* <div className="fs-5 ">{episode}</div> */}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
