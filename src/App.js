@@ -47,12 +47,10 @@ function App() {
 
       <div className="container">
         <div className="row">
-          <div className="col-3">
-            <Filters />
-          </div>
-          <div className="col-lg-8 col-12">
+          <div className="col-4">{/* <Filters /> */}</div>
+          <div className="col-lg-12 col-12">
             <div className="row">
-              <div className="col-4">Cards</div>
+              {/* <div className="col-4">Cards</div> */}
               <Cards results={results} />
             </div>
           </div>

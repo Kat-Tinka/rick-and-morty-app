@@ -91,6 +91,7 @@ popup-header {
 /* Position the front and back side */
 .flipCardFront,
 .flipCardBack {
+  /* font-size: fs-5 fw-bold; */
   position: absolute;
   border-radius: 10px 10px 10px 10px;
   width: 100%;

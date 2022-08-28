@@ -1,11 +1,11 @@
-import React from 'react'
+// import React from 'react'
 
-const Cardback = () => {
-  return (
-    <div>
-      Here are some more details about the Character
-    </div>
-  )
-}
+// const Cardback = () => {
+//   return (
+//     <div >
+//       Here are some more details about the Character
+//     </div>
+//   )
+// }
 
-export default Cardback
+// export default Cardback
