@@ -60,7 +60,7 @@ const Cards = ({ results }) => {
                 })()}
               </div>
               <div className={`${styles.flipCardBack}`}>
-                <p class="fs-5 fw-bold"></p>{name}</p>
+                <p class="fs-5 fw-bold">{name}</p>
                 <CardModal
                   name={name}
                   status={status}
